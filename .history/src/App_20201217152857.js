@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import MyButton from './components/MyButton';
-import MyButtonChange from './components/MyButtonChange';
+import MyButton from './MyButton';
 import './App.css';
  class App extends Component {
 
@@ -20,8 +19,7 @@ import './App.css';
   render() {
     return (
       <div className="App">
-        <MyButtonChange ref={this.MyButtonChangeRef} title="Click me! - Button 1" setTimeout={this.timeChange} />
-        <MyButton ref={this.MyButtonRef} title="Click me! - Button 2" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} />
+      <MyButton ref={this.MyButtonRef} onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} />
       </div>
     )
   }

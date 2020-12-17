@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import MyButton from './components/MyButton';
-import MyButtonChange from './components/MyButtonChange';
+import MyButton from './MyButton';
 import './App.css';
  class App extends Component {
 
@@ -9,7 +8,7 @@ import './App.css';
       super(props);
       this.MyButtonRef = React.createRef();
     }
-    handleMouseOver = () => {
+    handleMouseMove = () => {
       this.MyButtonRef.current.style.background = ' rgb(195, 1, 4)';
       this.MyButtonRef.current.style.color = 'rgb(254, 254, 254)';
     }
@@ -20,8 +19,7 @@ import './App.css';
   render() {
     return (
       <div className="App">
-        <MyButtonChange ref={this.MyButtonChangeRef} title="Click me! - Button 1" setTimeout={this.timeChange} />
-        <MyButton ref={this.MyButtonRef} title="Click me! - Button 2" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} />
+      <MyButton ref={this.MyButtonRef} onMouseMove={this.handleMouseMove} onMouseOut={this.handleMouseOut} />
       </div>
     )
   }
